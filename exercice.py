@@ -23,8 +23,8 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
 
 def get_number_of_char(string: str, char: str) -> int:
     occurence = 0
-    for char in (string):
-        if string[i] == char:
+    for c in string:
+        if c == char:
             occurence+=1
 
     return occurence
@@ -32,11 +32,13 @@ def get_number_of_char(string: str, char: str) -> int:
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-    occurence = 0
-    if word in sentence:
-        occurence+=1
+    number_of_word = 0
+    sentence = sentence.split()
+    for w in sentence:
+       if w == word:
+           number_of_word += 1
 
-    return occurence
+    return number_of_word
 
 
 
